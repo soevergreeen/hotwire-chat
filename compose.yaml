@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    command: bundle exec rails s -b 0.0.0.0
+  test:
+    build: .
+    command: bundle exec rspec
+    volumes:
+      - .:/app
+
