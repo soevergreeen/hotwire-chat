@@ -17,7 +17,7 @@ pipeline {
     stage('Run tests') {
       steps {
         echo "🧪 Running RSpec..."
-        bat "docker run --rm ${IMAGE}:${TAG} bash -lc 'rspec'"
+        bat "docker run --rm ${IMAGE}:${TAG} bash -lc 'bundle exec rspec'"
       }
     }
   }
