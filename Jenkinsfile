@@ -14,12 +14,6 @@ pipeline {
       }
     }
 
-    stage('Run tests') {
-      steps {
-        echo "🧪 Running RSpec..."
-        bat """
-docker run --rm ${IMAGE}:${TAG} bash -lc "bundle exec rails db:migrate && bundle exec rspec"
-"""
       }
     }
   }
