@@ -23,3 +23,4 @@ pipeline {
       echo "❌ Build #${env.BUILD_NUMBER} failed"
     }
   }
+}
