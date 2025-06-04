@@ -10,14 +10,14 @@ pipeline {
     stage('Build image') {
       steps {
         echo "🚧 Building Docker image..."
-        sh "docker build -t ${IMAGE}:${TAG} ."
+        bat "docker build -t ${IMAGE}:${TAG} ."
       }
     }
 
     stage('Run tests') {
       steps {
         echo "🧪 Running RSpec..."
-        sh "docker run --rm ${IMAGE}:${TAG} bash -lc 'bundle exec rspec'"
+        bat "docker run --rm ${IMAGE}:${TAG} bash -lc 'bundle exec rspec'"
       }
     }
   }
