@@ -13,10 +13,7 @@ pipeline {
         bat "docker build -t ${IMAGE}:${TAG} ."
       }
     }
-
-      }
-    }
-  }
+   }
 
   post {
     success {
@@ -26,4 +23,3 @@ pipeline {
       echo "❌ Build #${env.BUILD_NUMBER} failed"
     }
   }
-}
